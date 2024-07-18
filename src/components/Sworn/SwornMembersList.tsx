@@ -12,9 +12,8 @@ export const SwornMembersList: React.FC<SwornMembersProps> = ({ membersUrls }) =
 
   return (
     <div className="w-full pt-5">
-      {/*TODO: change font */}
-      <h3 className="text-xl font-semibold text-center text-gray-500" >Sworn Members</h3>
-      <hr className="m-4 rounded-2xl border-t-2"/>
+      <h3 className="text-xl font-semibold text-center text-gray-500 font-Cinzel" >Sworn Members</h3>
+      <hr className="m-2 rounded-2xl border-t-2 border-red-400 opacity-15"/>
       {
         membersUrls.length === 0 && (
           <p className="text-blue-800 text-center">"This house has no sworn members"</p>
