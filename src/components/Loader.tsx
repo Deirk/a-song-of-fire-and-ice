@@ -1,6 +1,10 @@
-export const Loader = () => {
+interface Props {
+  isWhite? : boolean;
+}
+
+export const Loader = ({ isWhite = false }: Props) => {
   return (
-    <div className="py-2.5 px-5 mr-2 text-sm font-medium text-gray-90 inline-flex items-center">
+    <div className={`py-2.5 px-5 mr-2 text-sm font-medium ${isWhite ? 'text-white' : 'text-gray-900'} inline-flex items-center`}>
       <svg
         aria-hidden="true"
         role="status"

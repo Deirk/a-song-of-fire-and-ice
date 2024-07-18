@@ -3,7 +3,8 @@ import ReactDOM from "react-dom/client";
 
 import "./index.css";
 import { IceAndFireApp } from "./IceAndFireApp";
-import { TanStackProvider } from "./config/plugins/TanStackProvider";
+import { TanStackProvider } from './config/plugins';
+
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
