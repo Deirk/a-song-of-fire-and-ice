@@ -1,1 +1,1 @@
-export * from "./HouseCard";
+export * from "./Houses/HousesGrid";

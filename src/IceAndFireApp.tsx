@@ -1,5 +1,4 @@
-import { HouseCard } from './components';
-import { data } from "./config/data/mockData";
+import { HousesGrid } from "./components";
 
 export const IceAndFireApp = () => {
   return (
@@ -15,15 +14,8 @@ export const IceAndFireApp = () => {
             Character cheat sheet
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-4">
-          {data.map((item) => (
-            <HouseCard
-              key={item.name}
-              name={item.name}
-              region={item.region}
-            />
-          ))}
-        </div>
+        <HousesGrid />
+        <div className="grid grid-cols-3 gap-4"></div>
       </div>
     </div>
   );
