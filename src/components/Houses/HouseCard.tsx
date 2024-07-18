@@ -1,4 +1,4 @@
-import { useSwornMembers } from '../../hooks/useSwornMembers';
+import { SwornMembersList } from '../Sworn/SwornMembersList';
 
 interface Props {
   name: string;
@@ -7,25 +7,18 @@ interface Props {
 }
 
 export const HouseCard = ({ name, region, swornMembers }: Props) => {
-  const {swornMembersQueries} = useSwornMembers(swornMembers);
   return (
     <div className="bg-gray-400 w-full rounded-lg flex flex-col overflow-hidden">
       <div className="p-6 bg-gray-200 h-full m-2 rounded-lg">
         <div>
           {/*TODO: change font */}
-          <h2 className="mb-1 text-2xl text-blue-900 hover:text-blue-600 font-semibold">
+          <h2 className="mb-1 text-2xl text-blue-900 font-semibold">
             {name}
           </h2>
           <p className="text-sky-800 text-base">{region}</p>
         </div>
-        <div>
-          { 
-            swornMembersQueries.map((query) => (
-              <div key={query.data?.name}>
-                {query.data?.name}
-              </div>
-            ))
-          }
+        <div className="px-6 pb-6">
+          <SwornMembersList membersUrls={swornMembers} />
         </div>
       </div>
     </div>
